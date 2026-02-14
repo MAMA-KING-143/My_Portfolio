@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bn" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEALCAME TO MY PROFILE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* ইউনিক গ্লাস ডিজাইন */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); 
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+            font-family: 'Segoe UI', sans-serif; overflow: hidden;
+            -webkit-user-select: none; user-select: none;
+        }
+
+        .container {
+            position: relative; width: 90%; max-width: 900px; height: auto;
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);
+            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px; display: flex; flex-wrap: wrap; gap: 30px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+        }
+
+        /* বাম পাশের প্রোফাইল অংশ */
+        .profile-side { flex: 1; min-width: 250px; text-align: center; }
+        
+        .profile-img {
+            width: 150px; height: 150px; border-radius: 20px;
+            object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3); transform: rotate(-3deg);
+        }
+
+        .profile-side h1 { color: #fff; margin-top: 20px; font-size: 28px; letter-spacing: 1px; }
+        .profile-side p { color: #00d2ff; font-weight: bold; margin-bottom: 20px; }
+
+        /* ডান পাশের বায়ো অংশ */
+        .bio-side { flex: 1.5; min-width: 300px; color: #eee; }
+        .bio-side h2 { color: #fff; font-size: 20px; margin-bottom: 10px; border-left: 4px solid #00d2ff; padding-left: 10px; }
+        .bio-side p { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
+
+        .skill-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-badge { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 5px; font-size: 13px; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
+        .skill-badge:hover { background: #00d2ff; color: #000; font-weight: bold; }
+
+        /* সোশ্যাল বাটন */
+        .social-links { margin-top: 30px; display: flex; gap: 20px; }
+        .social-links a { color: #fff; font-size: 24px; transition: 0.3s; }
+        .social-links a:hover { color: #00d2ff; transform: scale(1.3); }
+
+        /* মোবাইল স্ক্রিন এর জন্য */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; text-align: center; height: 90vh; overflow-y: auto; }
+            .profile-side h1 { font-size: 22px; }
+            .bio-side h2 { border-left: none; border-bottom: 2px solid #00d2ff; display: inline-block; padding: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-side">
+            <img src="photo.jpg" alt="Profile" class="profile-img">
+            <h1>AHAD ANSARI</h1>
+            <p>Digital Creator & Developer</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/md.abdul.ahad.hossain98" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/md_ahad_hossain44" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/8801865378777" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="bio-side">
+            <h2>Myself</h2>
+            <p>আমি একজন সৃষ্টিশীল মানুষ। প্রযুক্তি এবং নতুন কিছু তৈরি করার প্রতি আমার অন্যরকম ভালো লাগা কাজ করে। আমি নিজেকে প্রতিনিয়ত নতুন কিছু শেখার মধ্যে ব্যস্ত রাখি। আমার লক্ষ্য হলো সহজ উপায়ে কঠিন সমস্যার সমাধান করা।</p>
+
+            <h2>MY SKILL</h2>
+            <div class="skill-container">
+                <div class="skill-badge">HTML5 / CSS3</div>
+                <div class="skill-badge">JAVASCRIPT</div>
+                <div class="skill-badge">PHP Basics</div>
+                <div class="skill-badge">Video Editing</div>
+                <div class="skill-badge">Graphics Design</div>
+                <div class="skill-badge">GitHub Expert</div>
+                <div class="skill-badge">Python Expert</div>
+                <div class="skill-badge">Facebook Expert</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // সিকিউরিটি স্ক্রিপ্ট
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 83)) {
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>
