@@ -1,104 +1,188 @@
 <!DOCTYPE html>
-<html lang="bn" oncontextmenu="return false;">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEALCAME TO MY PROFILE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        /* ইউনিক গ্লাস ডিজাইন */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); 
-            height: 100vh; display: flex; justify-content: center; align-items: center;
-            font-family: 'Segoe UI', sans-serif; overflow: hidden;
-            -webkit-user-select: none; user-select: none;
-        }
-
-        .container {
-            position: relative; width: 90%; max-width: 900px; height: auto;
-            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);
-            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 40px; display: flex; flex-wrap: wrap; gap: 30px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
-        }
-
-        /* বাম পাশের প্রোফাইল অংশ */
-        .profile-side { flex: 1; min-width: 250px; text-align: center; }
-        
-        .profile-img {
-            width: 150px; height: 150px; border-radius: 20px;
-            object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3); transform: rotate(-3deg);
-        }
-
-        .profile-side h1 { color: #fff; margin-top: 20px; font-size: 28px; letter-spacing: 1px; }
-        .profile-side p { color: #00d2ff; font-weight: bold; margin-bottom: 20px; }
-
-        /* ডান পাশের বায়ো অংশ */
-        .bio-side { flex: 1.5; min-width: 300px; color: #eee; }
-        .bio-side h2 { color: #fff; font-size: 20px; margin-bottom: 10px; border-left: 4px solid #00d2ff; padding-left: 10px; }
-        .bio-side p { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
-
-        .skill-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-badge { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 5px; font-size: 13px; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
-        .skill-badge:hover { background: #00d2ff; color: #000; font-weight: bold; }
-
-        /* সোশ্যাল বাটন */
-        .social-links { margin-top: 30px; display: flex; gap: 20px; }
-        .social-links a { color: #fff; font-size: 24px; transition: 0.3s; }
-        .social-links a:hover { color: #00d2ff; transform: scale(1.3); }
-
-        /* মোবাইল স্ক্রিন এর জন্য */
-        @media (max-width: 768px) {
-            .container { flex-direction: column; text-align: center; height: 90vh; overflow-y: auto; }
-            .profile-side h1 { font-size: 22px; }
-            .bio-side h2 { border-left: none; border-bottom: 2px solid #00d2ff; display: inline-block; padding: 0 10px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050817">
+  <meta name="description" content="Ahad's developer portfolio — learning, building, and dreaming bigger.">
+  <title>Ahad | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Ahad home"><span class="brand-icon">&lt;/&gt;</span><span>Ahad Ansari</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="mainNav">
+      <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <a class="cv-button" href="#contact"><span>↧</span> Contact Me</a>
+  </header>
 
-    <div class="container">
-        <div class="profile-side">
-            <img src="photo.jpg" alt="Profile" class="profile-img">
-            <h1>AHAD ANSARI</h1>
-            <p>Digital Creator & Developer</p>
-            
-            <div class="social-links">
-                <a href="https://www.facebook.com/md.abdul.ahad.hossain98" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/md_ahad_hossain44" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/8801865378777" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="wave">👋</span> Hello, I'm</span>
+        <h1>Ahad <span>Ansari</span></h1>
+        <h2>Web Developer <span class="muted">&amp; Future Programmer</span></h2>
+        <p>I'm a passionate learner, currently learning Python and web development. I'm building projects step by step to become a skilled programmer and create useful apps, websites, and games.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">View My Projects <span>→</span></a><a class="button button-outline" href="#contact">✉ Contact Me</a></div>
+        <div class="socials" aria-label="Social links">
+          <a
+    href="https://github.com/MAMA-KING-143"
+    class="social-link"
+    aria-label="GitHub"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Git
+</a><a href="#" class="social-link placeholder-link" aria-label="Facebook">f</a><a href="#" class="social-link placeholder-link" aria-label="YouTube">▶</a><a href="#" class="social-link placeholder-link" aria-label="LinkedIn">in</a>
         </div>
+      </div>
+      <div class="hero-art" aria-label="Developer illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="avatar-card">
+       <img src="ahad1.jpg" alt="Ahad's Photo" class="avatar-photo">
+       </div>
 
-        <div class="bio-side">
-            <h2>Myself</h2>
-            <p>আমি একজন সৃষ্টিশীল মানুষ। প্রযুক্তি এবং নতুন কিছু তৈরি করার প্রতি আমার অন্যরকম ভালো লাগা কাজ করে। আমি নিজেকে প্রতিনিয়ত নতুন কিছু শেখার মধ্যে ব্যস্ত রাখি। আমার লক্ষ্য হলো সহজ উপায়ে কঠিন সমস্যার সমাধান করা।</p>
+      <div class="floating-code code-one">&lt;build/&gt;</div>
+      <div class="floating-code code-two">0101 1010</div>
+      <aside class="goals-card">
+        <p class="mono card-label"># My Goals</p>
+        <ul><li><span>✓</span> Learn Python</li><li><span>✓</span> Master Web Development</li><li><span>✓</span> Build Games &amp; Apps</li><li><span>✓</span> Learn Laravel</li><li><span>✓</span> Grow as a Developer</li><li><span>✓</span> Make My Own Projects</li></ul>
+        <p class="goal-slogan">Small Steps<br><span>Big Dreams</span></p><div class="tiny-line"></div>
+      </aside>
+    </section>
 
-            <h2>MY SKILL</h2>
-            <div class="skill-container">
-                <div class="skill-badge">HTML5 / CSS3</div>
-                <div class="skill-badge">JAVASCRIPT</div>
-                <div class="skill-badge">PHP Basics</div>
-                <div class="skill-badge">Video Editing</div>
-                <div class="skill-badge">Graphics Design</div>
-                <div class="skill-badge">GitHub Expert</div>
-                <div class="skill-badge">Python Expert</div>
-                <div class="skill-badge">Facebook Expert</div>
-            </div>
+    <section class="about-skills section-wrap section-divider" id="about">
+      <div class="about-block">
+        <h2 class="section-title"><span class="title-icon">♙</span> About Me</h2>
+        <p>Hi! I'm Ahad, a beginner programmer with a big dream. I'm currently learning Python, HTML, CSS, JavaScript, PHP and more. I enjoy coding, solving problems, and building things from scratch. My goal is to become a skilled developer and create useful websites, apps, and games.</p>
+        <div class="mini-facts"><span>⌖ Bangladesh</span><span>♧ Student</span><span>♡ Coding &amp; Gaming</span></div>
+        <a class="text-link" href="#contact">Let's connect <span>→</span></a>
+      </div>
+      <div class="skills-block" id="skills">
+        <h2 class="section-title"><span class="title-icon code-title">&lt;/&gt;</span> My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo python">Py</span><span>Python</span></div><div class="skill-track"><span style="width:45%"></span></div><small>Learning</small></div>
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo html-logo">5</span><span>HTML</span></div><div class="skill-track"><span style="width:65%"></span></div><small>Learning</small></div>
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo css-logo">3</span><span>CSS</span></div><div class="skill-track"><span style="width:45%"></span></div><small>Learning</small></div>
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo js-logo">JS</span><span>JavaScript</span></div><div class="skill-track"><span style="width:20%"></span></div><small>Exploring</small></div>
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo php-logo">php</span><span>PHP</span></div><div class="skill-track"><span style="width:15%"></span></div><small>Planned</small></div>
+          <div class="skill-card"><div class="skill-top"><span class="skill-logo laravel-logo">L</span><span>Laravel</span></div><div class="skill-track"><span style="width:10%"></span></div><small>Planned</small></div>
         </div>
+        <p class="skills-note">Skill indicators are illustrative — update them as you progress.</p>
+      </div>
+    </section>
+
+
+<section class="projects-section section-wrap section-divider" id="projects">
+    <div class="section-heading">
+        <h2 class="section-title"><span class="title-icon">▣</span> My Projects</h2>
+        <span class="heading-note">Things I'm building <span>↗</span></span>
     </div>
 
-    <script>
-        // সিকিউরিটি স্ক্রিপ্ট
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 83)) {
-                return false;
-            }
-        };
-    </script>
+    <div class="project-grid">
+
+        <article class="project-card" data-link="https://example.com/game">
+            <div class="project-art game-art">
+                <span class="pixel-sun"></span>
+                <span class="pixel-hill"></span>
+                <span class="pixel-player">▣</span>
+                <span class="pixel-coin">●</span>
+            </div>
+            <div class="project-content">
+                <h3>My Game Website</h3>
+                <h3>Comeing Soon</h3>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-link="https://mama-king-143.github.io/VOTER_LIST/">
+            <div class="project-art voter-art">
+                <div class="mock-window">
+                    <b>◉ Voter List Search</b>
+                    <span>⌕ Search by name</span>
+                    <span>▤ Search results</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Voter List Search</h3>
+                <p>A search interface concept for finding records by name and address.</p>
+                
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-link="https://example.com/dokanhisab">
+            <div class="project-art shop-art">
+                <div class="shop-window">
+                    <b>SHOP ACCOUNT</b>
+                    <span>＋ New entry</span>
+                    <span>৳ Customer balance</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>DokanHisab</h3>
+                <h3>Comeing Soon</h3>
+                <div class="tags">
+                    <span>Python</span><span>Learning Project</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card" data-link="https://example.com/todo-app">
+            <div class="project-art todo-art">
+                <div class="todo-window">
+                    <b>To-Do App</b>
+                    <span>☑ Learn coding</span>
+                    <span>☐ Build a project</span>
+                    <span>☐ Keep improving</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>To-Do List App</h3>
+                <h3>Comeing Soon</h3>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+      <p class="project-note">These cards are editable project examples. Replace them with your real demos and repository links when ready.</p>
+    </section>
+
+    <section class="contact-section section-wrap section-divider" id="contact">
+      <div class="contact-intro"><h2 class="section-title"><span class="title-icon">➤</span> Contact Me</h2><p>Have a question, project idea, or just want to say hello? Send me a message.</p><ul class="contact-details"><li>✉ <span>ahad55485@gmail.com</span></li><li>⌕ <span>Bangladesh</span></li><li>⌖ <span>Open to learning &amp; collaboration</span></li></ul></div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row"><label><span class="sr-only">Your name</span><input name="name" placeholder="♙  Your Name" required></label><label><span class="sr-only">Your email</span><input name="email" type="email" placeholder="✉  Your Email" required></label></div>
+        <label><span class="sr-only">Your message</span><textarea name="message" rows="4" placeholder="✉  Message" required></textarea></label>
+        <button class="button button-primary send-button" type="submit">➤ Send Message</button><p class="form-status" id="formStatus" role="status"></p>
+      </form>
+      <div class="follow-block"><h3>Follow Me</h3><p>Let's connect and grow together!</p><div class="socials"><a
+    href="https://github.com/MAMA-KING-143"
+    class="social-link"
+    aria-label="GitHub"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Git
+</a><a href="https://github.com/MAMA-KING-143" class="social-link placeholder-link" aria-label="Facebook">f</a><a href="#" class="social-link placeholder-link" aria-label="YouTube">▶</a><a href="#" class="social-link placeholder-link" aria-label="LinkedIn">in</a></div><p class="handwritten">Code Today<br>Better Tomorrow</p></div>
+    </section>
+  </main>
+  <footer class="footer"><span>© <span id="year"></span> MD AHAD HOSSAIN</span><span>Built with curiosity &amp; code</span></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
