@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ভোটার তথ্য অনুসন্ধান</title>
+
+    <link rel="stylesheet" href="style1.css">
+    <script src="script1.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="brand">
+            <div class="brand-logo"><img src="logo.jpg" alt="আমার ছবি"></div>
+
+            <div>
+                <h1>ভোটার তথ্য অনুসন্ধান</h1>
+                <p>৩ নং আউলিয়াপুর ইউনিয়ন·কচুবাড়ী [উওর]· ৪ নং ওয়ার্ড</p>
+            </div>
+        </div>
+
+        <span class="header-badge">VOTER SEARCH</span>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Search Section -->
+        <section class="search-panel">
+
+            <span class="eyebrow">SEARCH DATABASE</span>
+
+            <h2>ভোটারের তথ্য খুঁজুন</h2>
+
+            <p class="intro">
+                নাম, ভোটার নম্বর অথবা অন্য কোনো তথ্য লিখে সার্চ করুন।
+            </p>
+
+            <form id="searchForm" class="search-form">
+
+                <input
+                    type="search"
+                    id="userInput"
+                    placeholder="এখানে নাম বা তথ্য লিখুন..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    🔎 সার্চ করুন
+                </button>
+
+            </form>
+
+            <div class="search-meta">
+
+                <p id="status" role="status" aria-live="polite">
+                    সার্চ করার জন্য উপরে তথ্য লিখুন।
+                </p>
+
+                <span id="resultCount" class="count-badge">
+                    ০টি ফলাফল
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Male এবং Female আলাদা কলাম -->
+        <section class="results-section">
+
+            <!-- Male Heading -->
+            <div class="column-heading male-heading">
+
+                <span class="column-icon">♂</span>
+
+                <div>
+                    <h2>Male List</h2>
+                    <p>পুরুষ ভোটারের তথ্য</p>
+                </div>
+
+                <span id="maleCount" class="column-count">০</span>
+
+            </div>
+
+
+            <!-- Female Heading -->
+            <div class="column-heading female-heading">
+
+                <span class="column-icon">♀</span>
+
+                <div>
+                    <h2>Female List</h2>
+                    <p>নারী ভোটারের তথ্য</p>
+                </div>
+
+                <span id="femaleCount" class="column-count">০</span>
+
+            </div>
+
+
+            <!-- Male Results: বাম পাশে -->
+            <div id="maleResults" class="result-column">
+
+                <div class="empty-state">
+                    Male List-এর ফলাফল এখানে দেখা যাবে।
+                </div>
+
+            </div>
+
+
+            <!-- Female Results: ডান পাশে -->
+            <div id="femaleResults" class="result-column">
+
+                <div class="empty-state">
+                    Female List-এর ফলাফল এখানে দেখা যাবে।
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <p class="privacy-note">
+            ব্যক্তিগত ভোটার তথ্য কেবল অনুমোদিত ও আইনসম্মত কাজে ব্যবহার করুন।
+        </p>
+
+    </main>
+
+
+    
+<!-- Footer -->
+<footer class="site-footer">
+
+    <p>
+        © <span id="year"></span> ভোটার তথ্য অনুসন্ধান
+    </p>
+
+    <p class="footer-credit">
+        Made with <span class="heart">♥</span> by
+        <span class="author-name">Ahad Ansari</span>
+    </p>
+
+    <p class="footer-tagline">
+        Designed & Developed with passion.
+    </p>
+
+</footer>
+
+
+
+</body>
+</html>
+
